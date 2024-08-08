@@ -22,7 +22,10 @@ The WordPress Plugin Boilerplate includes the following files:
 
 The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs. For example, if your plugin is named 'example-me' then:
 
-* rename files from `rpp-core-functionality` to `example-me`
+* rename files from `rpp-core-functionality` to `example-me` using [Microsoft PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/)
+*       1st argument(FROM)  is ^(.*)rpp-core-functionality(.*)$
+*       2nd argument (TO) is  $1example-me$2
+*       Select 'Use Regular Expressions', 'Match All Occurances', 'Case Sensitive'
 * change `rpp_core_functionality` to `example_me`
 * change `rpp-core-functionality` to `example-me`
 * change `Rpp_Core_Functionality` to `Example_Me`
