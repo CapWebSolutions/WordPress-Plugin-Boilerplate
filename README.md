@@ -20,16 +20,22 @@ The WordPress Plugin Boilerplate includes the following files:
 
 ## Installation
 
-The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs. For example, if your plugin is named 'example-me' then:
+The Boilerplate can be installed directly into your plugins folder "as-is". You will want to rename it and the classes inside of it to fit your needs. For example, if your plugin is named 'my-cool-plugin' then:
 
-* rename files from `rpp-core-functionality` to `example-me` using [Microsoft PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/)
-*       1st argument(FROM)  is ^(.*)rpp-core-functionality(.*)$
-*       2nd argument (TO) is  $1example-me$2
+* 1. File Renaming.
+*    Rename files from `plugin-name` to `my-cool-plugin` using [Microsoft PowerToys PowerRename](https://learn.microsoft.com/en-us/windows/powertoys/)
+*       1st argument(FROM)  is ^(.*)plugin-name(.*)$
+*       2nd argument (TO) is  $1my-cool-plugin$2
 *       Select 'Use Regular Expressions', 'Match All Occurances', 'Case Sensitive'
-* change `rpp_core_functionality` to `example_me`
-* change `rpp-core-functionality` to `example-me`
-* change `Rpp_Core_Functionality` to `Example_Me`
-* change `RPP_CORE_FUNCTIONALITY_` to `EXAMPLE_ME_`
+* 
+* 2. Text strings renaming. Process these in order. Exclude this README from the renaming. 
+*   Change `plugin_name`  to `my_cool_plugin`   Note: Underscores, all lowercase.
+*   Change `plugin-name`  to `my-cool-plugin`   Note: Dashes. All lower case. 
+*   Change `Plugin_Name`  to `My_Cool_Plugin`   Note: All leading caps with underscores. 
+*   Change `PLUGIN_NAME_` to `MY_COOL_PLUGIN_`  Note: All CAPS, underscore, AND trailing underscore. 
+*   Replace `http://example.com` with `https://domain_name_of_site_using_plugin`
+*   Replace `example.com` with `naked domain name`  Note: No https:// is used. 
+
 
 It's safe to activate the plugin at this point. Because the Boilerplate has no real functionality there will be no menu items, meta boxes, or custom post types added until you write the code.
 
