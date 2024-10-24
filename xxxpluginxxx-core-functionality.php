@@ -10,18 +10,18 @@
  *
  * @link              http://example.com
  * @since             1.0.0
- * @package           Rpp_Core_Functionality
+ * @package           Xxx_Core_Functionality
  *
  * @wordpress-plugin
- * Plugin Name:       RPP Core Functionality
- * Plugin URI:        http://github.com/CapWebSolutions/rpp-core-functionality.git/
+ * Plugin Name:       XXX Core Functionality
+ * Plugin URI:        http://github.com/CapWebSolutions/xxx-core-functionality.git/
  * Description:       This plugin contains all of the site specific functions needed to support referralpartnersplus.com.
  * Version:           1.0.0
  * Author:            Cap Web Solutions | Matt Ryan
  * Author URI:        https://capwebsolutions.com/
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       rpp-core-functionality
+ * Text Domain:       xxx-core-functionality
  * Domain Path:       /languages
  */
 
@@ -38,34 +38,34 @@ if ( ! defined( 'WPINC' ) ) {
 if( ! function_exists('get_plugin_data') ){
 	require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 }
-define( 'RPP_CORE_FUNCTIONALITY_VERSION', get_plugin_data(__FILE__ )['Version'] );
+define( 'XXX_CORE_FUNCTIONALITY_VERSION', get_plugin_data(__FILE__ )['Version'] );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-rpp-core-functionality-activator.php
+ * This action is documented in includes/class-xxx-core-functionality-activator.php
  */
-function activate_rpp_core_functionality() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rpp-core-functionality-activator.php';
-	Rpp_Core_Functionality_Activator::activate();
+function activate_xxx_core_functionality() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-xxx-core-functionality-activator.php';
+	Xxx_Core_Functionality_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-rpp-core-functionality-deactivator.php
+ * This action is documented in includes/class-xxx-core-functionality-deactivator.php
  */
-function deactivate_rpp_core_functionality() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-rpp-core-functionality-deactivator.php';
-	Rpp_Core_Functionality_Deactivator::deactivate();
+function deactivate_xxx_core_functionality() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-xxx-core-functionality-deactivator.php';
+	Xxx_Core_Functionality_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_rpp_core_functionality' );
-register_deactivation_hook( __FILE__, 'deactivate_rpp_core_functionality' );
+register_activation_hook( __FILE__, 'activate_xxx_core_functionality' );
+register_deactivation_hook( __FILE__, 'deactivate_xxx_core_functionality' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-rpp-core-functionality.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-xxx-core-functionality.php';
 
 /**
  * Begins execution of the plugin.
@@ -76,10 +76,10 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-rpp-core-functionality.php
  *
  * @since    1.0.0
  */
-function run_rpp_core_functionality() {
+function run_xxx_core_functionality() {
 
-	$plugin = new Rpp_Core_Functionality();
+	$plugin = new Xxx_Core_Functionality();
 	$plugin->run();
 
 }
-run_rpp_core_functionality();
+run_xxx_core_functionality();

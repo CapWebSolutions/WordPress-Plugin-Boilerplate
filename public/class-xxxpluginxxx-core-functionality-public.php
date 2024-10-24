@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/public
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/public
  */
 
 /**
@@ -16,20 +16,20 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/public
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/public
  * @author     Your Name <email@example.com>
  */
-class Rpp_Core_Functionality_Public {
+class Xxx_Core_Functionality_Public {
 
 	/**
 	 * The ID of this plugin.
 	 *
 	 * @since    1.0.0
 	 * @access   private
-	 * @var      string    $rpp_core_functionality    The ID of this plugin.
+	 * @var      string    $xxx_core_functionality    The ID of this plugin.
 	 */
-	private $rpp_core_functionality;
+	private $xxx_core_functionality;
 
 	/**
 	 * The version of this plugin.
@@ -44,12 +44,12 @@ class Rpp_Core_Functionality_Public {
 	 * Initialize the class and set its properties.
 	 *
 	 * @since    1.0.0
-	 * @param      string    $rpp_core_functionality       The name of the plugin.
+	 * @param      string    $xxx_core_functionality       The name of the plugin.
 	 * @param      string    $version    The version of this plugin.
 	 */
-	public function __construct( $rpp_core_functionality, $version ) {
+	public function __construct( $xxx_core_functionality, $version ) {
 
-		$this->rpp_core_functionality = $rpp_core_functionality;
+		$this->xxx_core_functionality = $xxx_core_functionality;
 		$this->version = $version;
 
 	}
@@ -65,15 +65,15 @@ class Rpp_Core_Functionality_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Rpp_Core_Functionality_Loader as all of the hooks are defined
+		 * defined in Xxx_Core_Functionality_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Rpp_Core_Functionality_Loader will then create the relationship
+		 * The Xxx_Core_Functionality_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->rpp_core_functionality, plugin_dir_url( __FILE__ ) . 'css/rpp-core-functionality-public.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->xxx_core_functionality, plugin_dir_url( __FILE__ ) . 'css/xxx-core-functionality-public.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Rpp_Core_Functionality_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Rpp_Core_Functionality_Loader as all of the hooks are defined
+		 * defined in Xxx_Core_Functionality_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Rpp_Core_Functionality_Loader will then create the relationship
+		 * The Xxx_Core_Functionality_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->rpp_core_functionality, plugin_dir_url( __FILE__ ) . 'js/rpp-core-functionality-public.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->xxx_core_functionality, plugin_dir_url( __FILE__ ) . 'js/xxx-core-functionality-public.js', array( 'jquery' ), $this->version, false );
 
 	}
 

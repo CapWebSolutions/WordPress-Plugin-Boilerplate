@@ -6,8 +6,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  * @author     Your Name <email@example.com>
  */
-class Rpp_Core_Functionality_Loader {
+class Xxx_Core_Functionality_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

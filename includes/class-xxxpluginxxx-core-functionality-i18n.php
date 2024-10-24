@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  * @author     Your Name <email@example.com>
  */
-class Rpp_Core_Functionality_i18n {
+class Xxx_Core_Functionality_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Rpp_Core_Functionality_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'rpp-core-functionality',
+			'xxx-core-functionality',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

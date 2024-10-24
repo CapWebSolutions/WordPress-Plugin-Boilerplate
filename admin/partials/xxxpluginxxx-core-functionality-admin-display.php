@@ -8,8 +8,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/admin/partials
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/admin/partials
  */
 ?>
 

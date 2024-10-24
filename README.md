@@ -9,7 +9,7 @@ The WordPress Plugin Boilerplate includes the following files:
 * `.gitignore`. Used to exclude certain files from the repository.
 * `CHANGELOG.md`. The list of changes to the core project.
 * `README.md`. The file that you’re currently reading.
-* A `rpp-core-functionality` directory that contains the source code - a fully executable WordPress plugin.
+* A `xxx-core-functionality` directory that contains the source code - a fully executable WordPress plugin.
 
 ## Features
 
@@ -79,11 +79,11 @@ For reference, [here's a discussion](http://make.wordpress.org/themes/2013/03/04
 
 Note that if you include your own classes, or third-party libraries, there are three locations in which said files may go:
 
-* `rpp-core-functionality/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
-* `rpp-core-functionality/admin` is for all admin-specific functionality
-* `rpp-core-functionality/public` is for all public-facing functionality
+* `xxx-core-functionality/includes` is where functionality shared between the admin area and the public-facing parts of the site reside
+* `xxx-core-functionality/admin` is for all admin-specific functionality
+* `xxx-core-functionality/public` is for all public-facing functionality
 
-Note that previous versions of the Boilerplate did not include `Rpp_Core_Functionality_Loader` but this class is used to register all filters and actions with WordPress.
+Note that previous versions of the Boilerplate did not include `Xxx_Core_Functionality_Loader` but this class is used to register all filters and actions with WordPress.
 
 The example code provided shows how to register your hooks with the Loader class.
 

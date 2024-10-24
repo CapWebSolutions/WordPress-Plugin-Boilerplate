@@ -9,8 +9,8 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Rpp_Core_Functionality
- * @subpackage Rpp_Core_Functionality/includes
+ * @package    Xxx_Core_Functionality
+ * @subpackage Xxx_Core_Functionality/includes
  * @author     Your Name <email@example.com>
  */
-class Rpp_Core_Functionality {
+class Xxx_Core_Functionality {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Rpp_Core_Functionality {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Rpp_Core_Functionality_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Xxx_Core_Functionality_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -44,9 +44,9 @@ class Rpp_Core_Functionality {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      string    $rpp_core_functionality    The string used to uniquely identify this plugin.
+	 * @var      string    $xxx_core_functionality    The string used to uniquely identify this plugin.
 	 */
-	protected $rpp_core_functionality;
+	protected $xxx_core_functionality;
 
 	/**
 	 * The current version of the plugin.
@@ -67,12 +67,12 @@ class Rpp_Core_Functionality {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'RPP_CORE_FUNCTIONALITY_VERSION' ) ) {
-			$this->version = RPP_CORE_FUNCTIONALITY_VERSION;
+		if ( defined( 'XXX_CORE_FUNCTIONALITY_VERSION' ) ) {
+			$this->version = XXX_CORE_FUNCTIONALITY_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->rpp_core_functionality = 'rpp-core-functionality';
+		$this->xxx_core_functionality = 'xxx-core-functionality';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Rpp_Core_Functionality {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Rpp_Core_Functionality_Loader. Orchestrates the hooks of the plugin.
-	 * - Rpp_Core_Functionality_i18n. Defines internationalization functionality.
-	 * - Rpp_Core_Functionality_Admin. Defines all hooks for the admin area.
-	 * - Rpp_Core_Functionality_Public. Defines all hooks for the public side of the site.
+	 * - Xxx_Core_Functionality_Loader. Orchestrates the hooks of the plugin.
+	 * - Xxx_Core_Functionality_i18n. Defines internationalization functionality.
+	 * - Xxx_Core_Functionality_Admin. Defines all hooks for the admin area.
+	 * - Xxx_Core_Functionality_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,33 +103,33 @@ class Rpp_Core_Functionality {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rpp-core-functionality-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-xxx-core-functionality-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-rpp-core-functionality-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-xxx-core-functionality-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-rpp-core-functionality-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-xxx-core-functionality-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-rpp-core-functionality-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-xxx-core-functionality-public.php';
 
-		$this->loader = new Rpp_Core_Functionality_Loader();
+		$this->loader = new Xxx_Core_Functionality_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Rpp_Core_Functionality_i18n class in order to set the domain and to register the hook
+	 * Uses the Xxx_Core_Functionality_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -137,7 +137,7 @@ class Rpp_Core_Functionality {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Rpp_Core_Functionality_i18n();
+		$plugin_i18n = new Xxx_Core_Functionality_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -152,7 +152,7 @@ class Rpp_Core_Functionality {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Rpp_Core_Functionality_Admin( $this->get_rpp_core_functionality(), $this->get_version() );
+		$plugin_admin = new Xxx_Core_Functionality_Admin( $this->get_xxx_core_functionality(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -168,7 +168,7 @@ class Rpp_Core_Functionality {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Rpp_Core_Functionality_Public( $this->get_rpp_core_functionality(), $this->get_version() );
+		$plugin_public = new Xxx_Core_Functionality_Public( $this->get_xxx_core_functionality(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -191,15 +191,15 @@ class Rpp_Core_Functionality {
 	 * @since     1.0.0
 	 * @return    string    The name of the plugin.
 	 */
-	public function get_rpp_core_functionality() {
-		return $this->rpp_core_functionality;
+	public function get_xxx_core_functionality() {
+		return $this->xxx_core_functionality;
 	}
 
 	/**
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Rpp_Core_Functionality_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Xxx_Core_Functionality_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

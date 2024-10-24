@@ -22,7 +22,7 @@
  * @link       http://example.com
  * @since      1.0.0
  *
- * @package    Rpp_Core_Functionality
+ * @package    Xxx_Core_Functionality
  */
 
 // If uninstall not called from WordPress, then exit.
